@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "aora",
+    "name": "Aora",
     "scheme": "aora",
     "slug": "aora",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/images/logo-small.png",
+    "userInterfaceStyle": "dark",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/images/aora-splash.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
@@ -17,11 +17,13 @@
     ],
     "ios": {
       "supportsTablet": true,
+      "bundleIdentifier": "com.aora"
     },
     "android": {
+      "versionCode": 1,
       "package": "com.aora",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/images/logo-small.png",
         "backgroundColor": "#ffffff"
       }
     },
@@ -31,6 +33,15 @@
     "plugins": [
       "expo-router",
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "43514a1d-11a2-4089-8b21-409d8d0b949f"
+      }
+    },
+    "owner": "foolpool"
   }
 }

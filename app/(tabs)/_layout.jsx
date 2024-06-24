@@ -32,13 +32,13 @@ const TabLayout = () => {
                     <TabIcon icon={icons.home} color={color} name="Home" focused={focused}></TabIcon>
                 )
             }}/>
-            <Tabs.Screen name="bookmark" options={{
+            {/* <Tabs.Screen name="bookmark" options={{
                 title: 'Bookmark',
                 headerShown: false,
                 tabBarIcon: ({color , focused}) =>(
                     <TabIcon icon={icons.bookmark} color={color} name="Bookmark" focused={focused}></TabIcon>
                 )
-            }}/>
+            }}/> */}
             <Tabs.Screen name="create" options={{
                 title: 'Create',
                 headerShown: false,

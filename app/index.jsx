@@ -6,6 +6,7 @@ import { images } from '../constants'
 import CustomButton from '../components/button'
 import { StatusBar } from 'expo-status-bar'
 import { useGlobalContext } from '../context/GlobalProvider'
+import Loader from '../components/loader'
 
 export default function App() {
 	const {isLoading, isLoggedIn} = useGlobalContext()
@@ -24,7 +25,7 @@ export default function App() {
 					</View>
 					<Text className='text-sm font-pregular text-gray-100 mt-7 text-center'>Where Creativity Meets Innovation: Embark on a Journey of Limitless
 					Exploration with Aora</Text>
-					<CustomButton title='Continue With Email' handlePress={()=>{router.push('/signin')}} containerStyles="w-full mt-7"/>
+					{!isLoading ? <CustomButton title='Continue With Email' handlePress={()=>{router.push('/signin')}} containerStyles="w-full mt-7"/> : <Loader/>}
 				</View> 
 			</ScrollView>
 			<StatusBar backgroundColor='#161622' style='light'/> 
